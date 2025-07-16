@@ -1,0 +1,150 @@
+.footer {
+    @include size(1440px, 260px);
+    margin: auto;
+    border-top: 2px solid red;
+
+    .footer-container {
+        @include size(950px, 220px);
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 40px;
+
+        .footer-block {
+            @include size(215px, 220px);
+
+            .dreamshare {
+                color: red;
+                font-family: "Montserrat", sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            .footer-big-text {
+                font-family: "Montserrat", sans-serif;
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 17px;
+            }
+
+            .footer-small-text {
+                font-family: "Montserrat", sans-serif;
+                font-size: 12px;
+                font-weight: 400;
+                margin-bottom: 14px;
+            }
+
+            .logo-block {
+                font-family: "Montserrat", sans-serif;
+                font-size: 12px;
+                font-weight: 700;
+                text-align: right;
+                color: lightgrey
+            }
+
+            .logo-image {
+                @include size(135px, 35px);
+
+                background: {
+                    image: url(../images/Bitmap.png);
+                    position: center;
+                    repeat: no-repeat;
+                    size: auto;
+                }
+
+                position: relative;
+                left: 90px;
+            }
+        }
+    }
+}
+
+
+
+// -------------960----------------------------------------
+
+@media (max-width:960px) {
+    .footer {
+        @include size(768px, 240px);
+
+        .footer-container {
+            @include size(768px, 240px);
+            display: flex;
+            justify-content: space-evenly;
+
+
+
+            .footer-block {
+                @include size(180px, 200px);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .footer-small-text {
+                    margin-left: 70px;
+                }
+
+                .logo-image {
+                    position: relative;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+// -------------- 570 -----------------------------------
+
+@media screen and (max-width:570px){
+    .footer{
+        @include size(320px, 270px); 
+
+        .footer-container{
+           @include size(320px, 230px); 
+           flex-direction: column;
+           margin-top: -15px; 
+
+           .footer-block{
+            @include size(215px, auto); 
+            margin: 0px auto;
+
+            
+           }
+           .dreamshare{
+            @include size(215px, auto); 
+            margin-top: -10px;
+            margin-left: 68px;
+            
+
+           }
+           .company{
+            @include size(215px, 70px); 
+
+            ul{
+               @include size(200px, 55px); 
+               margin-top: -10px; 
+               display: flex;
+               flex-wrap: wrap;
+               justify-content: center;
+
+               .footer-small-text{
+                margin-top: 1px;
+                margin-left: 10px;
+                font-size: 13px;
+               }
+            }
+           }
+           .partners{
+            @include size(215px, 15px); 
+            margin-top: -9px;
+           }
+           .desby{
+            @include size(215px, 70px); 
+           }
+        }
+    }
+}
+
+
+
+

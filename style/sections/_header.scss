@@ -1,0 +1,205 @@
+.header {
+    width: 1440px;
+    height: 700px;
+    margin: auto;
+
+    background: {
+        image: url(../images/Background.jpg);
+        position: center;
+        repeat: no-repeat;
+        size: cover;
+    }
+
+    // -----------------menue---------------------------
+    .menue {
+        width: 63%;
+        height: 60px;
+        position: relative;
+        top: 30px;
+        left: 245px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            color: white;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .navi {
+            width: 200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .navi-item {
+                width: 95px;
+                height: 35px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .navi-link {
+                    text-decoration: none;
+                    color: white;
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 17px;
+                    font-weight: 400;
+                }
+
+                & :hover {
+                    width: 95px;
+                    height: 35px;
+                    border: 3px solid white;
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+    }
+
+    // ---------------text-box-----------------------------------
+
+    .header-textbox {
+        width: 35%;
+        height: 400px;
+        position: relative;
+        top: 145px;
+        margin: 0 auto;
+
+        .big-text-box {
+            width: 100%;
+            height: 200px;
+            color: white;
+            font-family: "Montserrat", sans-serif;
+            font-size: 52px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            margin-top: -20px;
+        }
+
+        .smoll-text {
+            color: white;
+            font-family: "Montserrat", sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            word-spacing: 10px;
+            text-align: center
+        }
+
+        .head-button {
+            width: 215px;
+            height: 45px;
+            background-color: red;
+            border-radius: 20px;
+            margin: 45px 155px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-family: "Montserrat", sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    }
+}
+
+
+
+// -------------------960----------------------------------------
+
+
+
+@media screen and (max-width:960px) {
+    .header {
+        @include size(768px, 700px);
+        background-image: url(../images/Bitmap768.jpg);
+        margin: auto;
+
+        .menue {
+            @include size(90%, 60px);
+            position: relative;
+            top: 30px;
+            left: 35px;
+
+            .navi {
+                width: 190px;
+
+                .navi-link {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .header-textbox {
+            width: 67%;
+            position: relative;
+            top: 140px;
+
+            .big-text-box {
+                font-size: 51px;
+            }
+            .head-button{
+                margin-top: 35px;
+            }
+        }
+
+
+    }
+}
+// ---------------------768---------------------------------------
+
+// ----------------- 570 ----------------------------------------------
+
+@media screen and (max-width:570px){
+    .header {
+        @include size(320px, 555px);
+        background-image: url(../images/Bitmap320.jpg);
+
+        .menue{
+            width: 200px;
+            height: 155px;
+            margin-top: -10px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .header-textbox{
+            width: 275px;
+            height: 175px;
+            margin-top: -75px;
+
+            .big-text-box{
+                width: 270px;
+                height: 50px;
+                margin-top: 3px;
+
+                .big-text-p{
+                    font-size: 29px;
+                }
+
+                
+            }
+            .smoll-text{
+                    font-size: 19px;
+                    margin-top: 24px;
+                }
+
+            .head-button{
+                width: 275px;
+                height: 40px;
+                margin: auto;
+                margin-top: 20px;
+            }
+
+        }
+    }
+}

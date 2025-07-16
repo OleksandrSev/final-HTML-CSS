@@ -1,0 +1,80 @@
+.section-4{
+    @include size(940px, 260px);
+    margin: auto;
+    margin-top: 93px;
+
+}
+.section4-text{
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 53px;
+}
+.input-block{
+    @include size(485px, 40px);
+    margin: auto;
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+.your_interesting{
+    @include size(300px, 40px);
+    border: 1px solid black;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    text-align: left
+}
+.section4-button{
+    @include size(175px, 40px);
+    background-color: red;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font: {
+        family: "Montserrat", sans-serif;
+        size: 14px;
+        weight: 600;
+    }
+}
+
+// ---------------960----------------------------------------
+
+@media (max-width:960px){
+    .section-4{
+        @include size(768px, 255px);
+    }
+}
+
+
+// ---------------570----------------------------------------
+
+
+@media screen and (max-width:570px){
+    .section-4{
+       @include size(300px, 225px); 
+       margin-top: 40px;
+
+       .section4-text{
+        margin-top: 22px;
+       }
+       .input-block{
+        @include size(300px, 90px); 
+        margin-top: 17px;
+        display: flex;
+        flex-direction: column;
+
+        .your_interesting{
+           @include size(290px, 40px); 
+           margin: 0 auto; 
+        }
+        .section4-button{
+           @include size(280px, 40px);  
+           margin: auto;
+        }
+
+       }
+    }
+}

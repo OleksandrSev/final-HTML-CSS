@@ -1,0 +1,215 @@
+.section-2 {
+    width: 940px;
+    height: 365px;
+    margin: auto;
+    margin-top: 91px;
+
+    .sect2-boxes {
+        @include size(940px, 280px);
+        margin-top: 17px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+
+      
+
+        .sect2-box {
+            @include size(225px, 280px);
+
+            .foto-1 {
+                background: {
+                    image: url(../images/PFrtnrt/Photo.png);
+                    position: center;
+                    repeat: no-repeat;
+                    size: cover;
+                }
+
+                .icon-1 {
+                    background: {
+                        image: url(../images/icon/music2.svg);
+                        position: center;
+                        repeat: no-repeat;
+                        size: 50%;
+                        color: red;
+                    }
+                }
+            }
+
+            .foto-2 {
+                background: {
+                    image: url(../images/PFrtnrt/Bitmap.png);
+                    position: center;
+                    repeat: no-repeat;
+                    size: cover;
+                }
+
+                .icon-2 {
+                    background: {
+                        image: url(../images/icon/brush.svg);
+                        position: center;
+                        repeat: no-repeat;
+                        size: 50%;
+                        color: aqua;
+                    }
+                }
+            }
+
+            .foto-3 {
+                background: {
+                    image: url(../images/PFrtnrt/Bitmap2.png);
+                    position: center;
+                    repeat: no-repeat;
+                    size: cover;
+                }
+
+                .icon-3 {
+                    background: {
+                        image: url(../images/icon/camera.svg);
+                        position: center;
+                        repeat: no-repeat;
+                        size: 50%;
+                        color: orange;
+                    }
+                }
+            }
+
+            .foto-4 {
+                background: {
+                    image: url(../images/PFrtnrt/Bitmap3.png);
+                    position: center;
+                    repeat: no-repeat;
+                    size: cover;
+                }
+
+                .icon-4 {
+                    background: {
+                        image: url(../images/icon/Shape.svg);
+                        position: center;
+                        repeat: no-repeat;
+                        size: 85%;
+                        color: blue;
+                    }
+                }
+            }
+        }
+    }
+
+    .foto {
+        @include size(120px, 120px);
+        border-radius: 50%;
+        margin: 20px auto;
+    }
+
+    .icon {
+        @include size(30px, 30px);
+        border: 3px solid white;
+        border-radius: 50%;
+        position: relative;
+        top: 88px;
+        left: 83px;
+    }
+
+    .icon img {
+        transform: scale(0.6);
+        transform-origin: center;
+    }
+
+    .box-big-text {
+        font: {
+            family: "Montserrat", sans-serif;
+            size: 15px;
+            weight: 700;
+        }
+
+        text-align: center;
+    }
+
+    .box-small-text {
+        font: {
+            family: "Montserrat", sans-serif;
+            size: 14px;
+        }
+
+        text-align: center;
+        margin-top: 25px;
+    }
+}
+
+.sect2-button {
+    @include size(175px, 37px);
+    border: 3px solid red;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-decoration: none;
+    color: red;
+
+    font: {
+        family: "Montserrat", sans-serif;
+        size: 14px;
+        weight: 600;
+    }
+}
+
+
+
+
+
+// --------------------960------------------------------------------------
+
+@media (max-width:960px) {
+    .section-2 {
+        width: 768px;
+        height: 700px;
+
+        .sect2-boxes {
+            @include size(550px, 546px);
+            margin: auto;
+
+            display: flex;
+            justify-content: space-around;
+
+            .sect2-box {
+                width: 225px;
+                height: auto;
+            }
+        }
+    }
+}
+
+
+
+// ------------------ 570 ------------------------------------
+
+@media screen and (max-width:570px) {
+    .section-2 {
+        @include size(300px, 1025px);
+
+        .sect2-boxes {
+            @include size(300px, 945px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .sect2-box {
+                @include size(230px, 230px);
+
+
+                .box-big-text {
+                    margin-top: -15px;
+                }
+
+                .box-small-text {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        .sect2-button {
+            @include size(270px, 35px);
+        }
+    }
+}

@@ -1,0 +1,208 @@
+.section-1 {
+    @include size(940px, 465px);
+    margin: auto;
+    margin-top: 93px;
+
+    .imag-block-1,
+    .imag-block-2,
+    .imag-block-3 {
+        @include size(300px, 400px);
+    }
+
+    .block-button {
+        @include size(70px, 18px);
+        border-radius: 20px;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        letter-spacing: 3px;
+        position: relative;
+        top: 20px;
+        left: 40px;
+
+        font: {
+            family: "Montserrat", sans-serif;
+            size: 10px;
+            weight: 400;
+        }
+    }
+
+
+    .block-big-text {
+        color: white;
+
+        font: {
+            family: "Montserrat", sans-serif;
+            size: 24px;
+            weight: 600;
+        }
+
+        margin-left: 25px;
+    }
+
+    .block-small-text {
+        color: white;
+
+        font: {
+            family: "Montserrat", sans-serif;
+            size: 12px;
+        }
+
+        margin: 26px 25px;
+    }
+
+    .sec-1-block-image {
+        @include size(940px, 400px);
+        margin-top: 38px;
+        display: flex;
+        justify-content: space-between;
+
+        .imag-block-1 {
+            background: {
+                image: url(../images/step/1440/Step1.jpg);
+                position: center;
+                repeat: no-repeat;
+                size: cover;
+            }
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            .step1 {
+                position: relative;
+                top: -26px;
+                left: 25px;
+            }
+        }
+
+        .imag-block-2 {
+            background: {
+                image: url(../images/step/1440/Step2.jpg);
+                position: center;
+                repeat: no-repeat;
+                size: cover;
+            }
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            .step2 {
+                position: relative;
+                top: -17px;
+                left: 25px;
+            }
+        }
+
+        .imag-block-3 {
+            background: {
+                image: url(../images/step/1440/Step3.jpg);
+                position: center;
+                repeat: no-repeat;
+                size: cover;
+            }
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            .step3 {
+                position: relative;
+                top: -24px;
+                left: 25px;
+            }
+        }
+    }
+
+}
+
+
+// ---------------- 960 ---------------------------------------------
+
+@media (max-width:960px) {
+    .section-1 {
+        @include size(768px, 465px);
+
+        .sec-1-block-image {
+            @include size(768px, 400px);
+            display: flex;
+            justify-content: space-around;
+
+            .imag-block-1,
+            .imag-block-2,
+            .imag-block-3 {
+                @include size(235px, 400px);
+            }
+        }
+    }
+}
+
+// --------------- 570 -----------------------------------
+
+@media screen and (max-width:570px) {
+    .section-1 {
+        @include size(300px, 730px);
+        margin-top: 30px;
+
+        .sec-1-block-image {
+            @include size(300px, 738px);
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .imag-block-1,
+            .imag-block-2,
+            .imag-block-3 {
+                @include size(300px, 237px);
+            }
+
+            .imag-block-1 {
+                background: {
+                    image: url(../images/step/320/Step1.jpg);
+                    position: center;
+                    repeat: no-repeat;
+                    size: cover;
+                }
+                .step1{
+                    position: relative;
+                    top: -33px;
+                    left: 20px;
+                }
+                
+            }
+
+            .imag-block-2 {
+                background: {
+                    image: url(../images/step/320/Step2.jpg);
+                    position: center;
+                    repeat: no-repeat;
+                    size: cover;
+                }
+            }
+
+            .imag-block-3 {
+                background: {
+                    image: url(../images/step/320/Step3.jpg);
+                    position: center;
+                    repeat: no-repeat;
+                    size: cover;
+                }
+
+            }
+            .block-small-text{
+                    font-size: 13px;
+                    margin: 15px 20px;
+                }
+                .block-big-text{
+                    font-size: 23px;
+                    margin-bottom: 5px;
+                    line-height: 17px;
+                }
+        }
+    }
+}

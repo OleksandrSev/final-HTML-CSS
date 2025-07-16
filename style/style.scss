@@ -1,0 +1,53 @@
+@import "../base/reset";
+@import "../base/mixins";
+@import "../style/sections/header";
+@import "../style/sections/section-1";
+@import "../style/sections/section-2";
+@import "../style/sections/section-3";
+@import "../style/sections/section-4";
+@import "../style/sections/footer";
+
+
+.title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+// header{
+//     @include size(1440px, auto);
+//     margin: auto;
+// }
+// main{
+//     @include size(1440px, auto);
+//     margin: auto;
+// }
+// footer{
+//     @include size(1440px, auto);
+//     margin: auto;
+// }
+main{
+    width: 1440px;
+    margin: auto;
+}
+
+// ----------------940----------------------
+
+
+@media (max-width:960px) {
+    main{
+        width: 960px;
+        // margin: auto;
+    }
+    .title{
+        font-size: 22px;
+    }
+}
+
+// ------------- 570 -----------------------
+
+@media (max-width:570px){
+    main{
+        width: 320px;
+    }
+}
